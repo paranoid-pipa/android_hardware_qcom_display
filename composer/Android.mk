@@ -40,6 +40,10 @@ ifeq ($(TARGET_USES_FOD_ZPOS), true)
 LOCAL_CFLAGS                  += -DFOD_ZPOS
 endif
 
+ifeq ($(TARGET_SUPPORTS_DOLBY_VISION), true)
+LOCAL_CFLAGS += -DTARGET_SUPPORTS_DOLBY_VISION
+endif
+
 LOCAL_SRC_FILES               := QtiComposer.cpp QtiComposerClient.cpp service.cpp \
                                  QtiComposerHandleImporter.cpp \
                                  hwc_session.cpp \
